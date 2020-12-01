@@ -1,6 +1,7 @@
+const Character = require('../lib/Character')
 const Potion = require('../lib/Potion');
 
-jest.mock('../lib/Potion.js');
+//jest.mock('../lib/Potion.js');
 
 const { test, expect } = require('@jest/globals');
 const Player = require('../lib/Player');
@@ -50,7 +51,7 @@ test('checks if player is alive or not', () => {
 
     expect(player.isAlive()).toBeFalsy();
 });
-test("subtracts rom the player's health", () => {
+test("subtracts from the player's health", () => {
     const player = new Player ('Dave');
     const oldHealth = player.health;
 
